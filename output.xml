@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180311 02:33:51.988" generator="Robot 3.0 (Python 2.7.10 on darwin)">
+<suite source="/Users/reflektion/Documents/work/temp/sample.robot" id="s1" name="Sample">
+<test id="s1-t1" name="Test Chrome browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20180311 02:33:52.137" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com/'</msg>
+<status status="PASS" endtime="20180311 02:34:01.607" starttime="20180311 02:33:52.137"></status>
+</kw>
+<kw name="Log Title" library="Selenium2Library">
+<doc>Logs and returns the title of current page.</doc>
+<msg timestamp="20180311 02:34:01.612" level="INFO">Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs &amp; more</msg>
+<status status="PASS" endtime="20180311 02:34:01.612" starttime="20180311 02:34:01.608"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20180311 02:34:14.271" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180311 02:34:14.271" starttime="20180311 02:34:01.613"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180311 02:34:14.363" starttime="20180311 02:34:14.272"></status>
+</kw>
+<tags>
+<tag>chrome</tag>
+</tags>
+<status status="PASS" endtime="20180311 02:34:14.363" critical="yes" starttime="20180311 02:33:52.136"></status>
+</test>
+<test id="s1-t2" name="Test firefox browser">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>firefox</arg>
+</arguments>
+<msg timestamp="20180311 02:34:14.365" level="INFO">Opening browser 'firefox' to base url 'https://www.amazon.com/'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20180311 02:34:44.541" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20180311 02:34:44.541" starttime="20180311 02:34:44.536"></status>
+</kw>
+<msg timestamp="20180311 02:34:44.541" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20180311 02:34:44.543" level="FAIL">WebDriverException: Message: Can't load the profile. Profile Dir: /var/folders/fz/qsjk77v91bxd3gxqbyqwfcv80000gp/T/tmp80PCjl/webdriver-py-profilecopy If you specified a log_file in the FirefoxBinary constructor, check it for details.
+</msg>
+<status status="FAIL" endtime="20180311 02:34:44.543" starttime="20180311 02:34:14.365"></status>
+</kw>
+<tags>
+<tag>firefox</tag>
+</tags>
+<status status="FAIL" endtime="20180311 02:34:44.543" critical="yes" starttime="20180311 02:34:14.364">WebDriverException: Message: Can't load the profile. Profile Dir: /var/folders/fz/qsjk77v91bxd3gxqbyqwfcv80000gp/T/tmp80PCjl/webdriver-py-profilecopy If you specified a log_file in the FirefoxBinary constructor, check it for details.
+</status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20180311 02:34:44.544" starttime="20180311 02:34:44.544"></status>
+</kw>
+<status status="FAIL" endtime="20180311 02:34:44.544" starttime="20180311 02:33:51.990"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="1">Critical Tests</stat>
+<stat fail="1" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">chrome</stat>
+<stat fail="1" pass="0">firefox</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Sample" pass="1">Sample</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20180311 02:34:44.541" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+</errors>
+</robot>
