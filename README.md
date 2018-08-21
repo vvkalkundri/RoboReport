@@ -23,6 +23,12 @@ Or You can also make use of the shell script run.sh for setting up virtual envir
 
 This should generate the HTML report called graph.html
 
+## sample report screenshot 
+![report](summary_1.png?raw=true "summary report")
+![report](tag_wise_report.png.png?raw=true "summary report")
+
+
+
 License
 -------
 The code uses the Plotly library to plot the graphs (Plotly, Inc.)
