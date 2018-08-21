@@ -25,7 +25,7 @@ This should generate the HTML report called graph.html
 
 ## sample report screenshot 
 ![report](summary_1.png?raw=true "summary report")
-![report](tag_wise_report.png.png?raw=true "summary report")
+![report](tag_wise_report.png?raw=true "summary report")
 
 
 
